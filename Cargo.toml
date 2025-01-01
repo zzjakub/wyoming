@@ -1,0 +1,13 @@
+[package]
+name = "wyoming"
+version = "0.1.0"
+edition = "2024"
+authors = ["Jakub Zdanowicz-Zasidko <me@zzjakub.com>"]
+description = "Abstractions over the Wyoming protocol"
+license = "Apache-2.0"
+repository = "https://github.com/zzjakub/wyoming"
+homepage = "https://github.com/zzjakub/wyoming"
+documentation = "https://docs.rs/wyoming"
+
+
+[dependencies]

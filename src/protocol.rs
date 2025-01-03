@@ -1,6 +1,8 @@
 use bigdecimal::BigDecimal;
 use serde::{Deserialize, Serialize};
 
+pub mod event;
+
 #[derive(Debug)]
 pub struct Message {
     pub header: Header,
@@ -47,7 +49,17 @@ pub struct Header {
 #[non_exhaustive]
 #[serde(untagged)]
 pub enum EventType {
-    Info(Info),
+    Audio(event::Audio),
+    Info(event::Info),
+    SpeechRecognition(event::SpeechRecognition),
+    TextToSpeech(event::TextToSpeech),
+    WakeWord(event::WakeWord),
+    VoiceActivityDetection(event::VoiceActivityDetection),
+    IntentRecognition(event::IntentRecognition),
+    IntentHandling(event::IntentHandling),
+    AudioOutput(event::AudioOutput),
+    VoiceSatellite(event::VoiceSatellite),
+    Timers(event::Timers),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -55,10 +67,3 @@ pub struct Data(Vec<u8>);
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Payload(Vec<u8>);
-
-#[derive(Serialize, Deserialize, Debug)]
-#[non_exhaustive]
-#[serde(rename_all = "lowercase")]
-pub enum Info {
-    Describe,
-}

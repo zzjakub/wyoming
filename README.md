@@ -21,7 +21,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-wyoming = "0.2.0"
+wyoming = "0.2.1"
 ```
 
 License: Apache-2.0

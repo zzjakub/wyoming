@@ -19,7 +19,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! wyoming = "0.2.0"
+//! wyoming = "0.2.1"
 //! ```
 
 pub mod protocol;

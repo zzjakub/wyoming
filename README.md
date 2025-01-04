@@ -1,6 +1,7 @@
 # wyoming
 
 A Rust implementation of the [Wyoming protocol](https://github.com/rhasspy/wyoming)
+
 - a peer-to-peer protocol designed for voice assistants.
 
 ### Overview

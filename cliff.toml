@@ -49,6 +49,7 @@ commit_parsers = [
     { message = "^style", group = "Styling", default_scope = "other" },
     { message = "^test", group = "Testing", default_scope = "other" },
     { message = "^chore\\(release\\):", skip = true },
+    { message = "^chore: release wyoming version", skip = true },
     { message = "^chore", group = "Miscellaneous Tasks", default_scope = "other" },
     { body = ".*security", group = "Security", default_scope = "other" },
 ]

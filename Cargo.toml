@@ -1,6 +1,6 @@
 [package]
 name = "wyoming"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["Jakub Zdanowicz-Zasidko <me@zzjakub.com>"]
 description = "Abstractions over the Wyoming protocol"
@@ -25,16 +25,7 @@ pre-release-replacements = [
     { file = "src/lib.rs", search = "wyoming = .*", replace = "{{crate_name}} = \"{{version}}\"" },
 ]
 pre-release-hook = [
-    "cargo",
-    "readme",
-    ">",
-    "README.md",
-    "&&",
-    "git",
-    "cliff",
-    "--unreleased",
-    "-o",
-    "CHANGELOG.md",
-    "--tag",
-    "{{version}}",
+    "sh",
+    "-c",
+    "cargo readme -o README.md && git cliff --unreleased -o CHANGELOG.md --tag {{version}}",
 ]

@@ -18,3 +18,9 @@ thiserror = "2.0.9"
 [package.metadata.release]
 sign-commit = true
 sign-tag = true
+pre-release-commit-message = "chore: release {{crate_name}} version {{version}}"
+tag-message = "chore: release {{crate_name}} version {{version}}"
+pre-release-replacements = [
+    { file = "README.md", search = "wyoming = .*", replace = "{{crate_name}} = \"{{version}}\"" },
+    { file = "src/lib.rs", search = "wyoming = .*", replace = "{{crate_name}} = \"{{version}}\"" },
+]

@@ -1,7 +1,6 @@
 # wyoming
 
 A Rust implementation of the [Wyoming protocol](https://github.com/rhasspy/wyoming)
-
 - a peer-to-peer protocol designed for voice assistants.
 
 ### Overview
@@ -22,7 +21,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-wyoming = "0.1.0"
+wyoming = "0.2.0"
 ```
 
 License: Apache-2.0

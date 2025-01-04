@@ -24,3 +24,17 @@ pre-release-replacements = [
     { file = "README.md", search = "wyoming = .*", replace = "{{crate_name}} = \"{{version}}\"" },
     { file = "src/lib.rs", search = "wyoming = .*", replace = "{{crate_name}} = \"{{version}}\"" },
 ]
+pre-release-hook = [
+    "cargo",
+    "readme",
+    ">",
+    "README.md",
+    "&&",
+    "git",
+    "cliff",
+    "--unreleased",
+    "-o",
+    "CHANGELOG.md",
+    "--tag",
+    "{{version}}",
+]

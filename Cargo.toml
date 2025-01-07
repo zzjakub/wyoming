@@ -8,8 +8,9 @@ license = "Apache-2.0"
 repository = "https://github.com/zzjakub/wyoming"
 homepage = "https://github.com/zzjakub/wyoming"
 documentation = "https://docs.rs/wyoming"
-categories = ["network-programming", "api-bindings", "multimedia::audio"]
-keywords = ["wyoming", "voice-assistant", "protocol", "rhasspy", "agent"]
+categories = ["network-programming", "api-bindings"]
+keywords = ["wyoming", "voice-assistant", "protocol", "rhasspy", "p2p"]
+readme = "README.md"
 
 [dependencies]
 bigdecimal = { version = "0.4.7", features = ["serde-json"] }
